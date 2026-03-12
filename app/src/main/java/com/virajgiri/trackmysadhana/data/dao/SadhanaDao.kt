@@ -75,6 +75,9 @@ interface SadhanaDao {
     @Query("SELECT * FROM jap_entry WHERE sadhana_id = :sadhanaId AND sub_mantra_id IS NULL ORDER BY date DESC")
     fun getEntriesForSadhana(sadhanaId: Long): LiveData<List<JapEntry>>
 
+    @Query("SELECT * FROM jap_entry WHERE sadhana_id = :sadhanaId AND sub_mantra_id IS NULL AND date = :date ORDER BY id DESC")
+    fun getEntriesForSadhanaOnDate(sadhanaId: Long, date: String): LiveData<List<JapEntry>>
+
     @Query("SELECT * FROM jap_entry ORDER BY date DESC, sadhana_id ASC")
     fun getAllEntries(): LiveData<List<JapEntry>>
 

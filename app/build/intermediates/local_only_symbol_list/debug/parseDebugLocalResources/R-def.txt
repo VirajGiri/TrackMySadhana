@@ -38,6 +38,7 @@ id btnSave
 id btnSaveEntry
 id btnSubDecrement
 id btnSubIncrement
+id cardEntryDate
 id dividerMain
 id etCustomType
 id etDailyMala
@@ -51,6 +52,7 @@ id etTotalMala
 id fabAddSadhana
 id fragmentContainer
 id ivBackground
+id ivChangeDate
 id nav_dashboard
 id nav_history
 id nav_reports
@@ -62,6 +64,7 @@ id rvMantras
 id rvPastEntries
 id rvSadhanas
 id rvSubMantras
+id spinnerSadhanaFilter
 id tilCustomType
 id tilDailyMala
 id tilExperienceNote
@@ -73,16 +76,20 @@ id tilTotalMala
 id toolbar
 id tvAvgMala
 id tvCompletionPercent
+id tvCurrentStreak
 id tvDate
+id tvDateTotal
 id tvDaysCompleted
 id tvDaysMaintained
 id tvDaysProgress
 id tvEmpty
 id tvEndDateValue
 id tvEntryDate
+id tvEntryDateValue
 id tvEntryMala
 id tvEntryNote
 id tvEstimate
+id tvHistorySummary
 id tvLongestStreak
 id tvMainMantraLabel
 id tvMalaCount
@@ -97,6 +104,7 @@ id tvNote
 id tvProgressPercent
 id tvSadhanaName
 id tvSessionCount
+id tvSubMantraBadge
 id tvSubMantraLabel
 id tvSubSessionCount
 id tvSubTodayTotal
@@ -143,8 +151,10 @@ string hint_mantra_text
 string hint_sadhana_name
 string hint_start_date
 string hint_total_mala
+string label_all_sadhanas
 string label_avg_mala_day
 string label_completion_estimate
+string label_current_streak
 string label_daily_progress_chart
 string label_days
 string label_days_maintained
@@ -152,6 +162,8 @@ string label_days_suffix
 string label_delete
 string label_edit
 string label_end_date_auto
+string label_entry_date
+string label_filter_by_sadhana
 string label_longest_streak
 string label_mala
 string label_mala_suffix
@@ -161,6 +173,8 @@ string label_no_data
 string label_no_entries
 string label_no_history
 string label_past_entries
+string label_selected_date
+string label_sub_mantra_badge
 string label_today
 string label_total_mala_completed
 string label_total_progress

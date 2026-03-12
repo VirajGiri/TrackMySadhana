@@ -3247,6 +3247,7 @@ id buttonPanel
 id cache_measures
 id callMeasure
 id cancel_button
+id cardEntryDate
 id carryVelocity
 id center
 id centerCrop
@@ -3389,6 +3390,7 @@ id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
 id ivBackground
+id ivChangeDate
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3579,6 +3581,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerSadhanaFilter
 id spline
 id split_action_bar
 id spread
@@ -3660,16 +3663,20 @@ id transition_transform
 id triangle
 id tvAvgMala
 id tvCompletionPercent
+id tvCurrentStreak
 id tvDate
+id tvDateTotal
 id tvDaysCompleted
 id tvDaysMaintained
 id tvDaysProgress
 id tvEmpty
 id tvEndDateValue
 id tvEntryDate
+id tvEntryDateValue
 id tvEntryMala
 id tvEntryNote
 id tvEstimate
+id tvHistorySummary
 id tvLongestStreak
 id tvMainMantraLabel
 id tvMalaCount
@@ -3684,6 +3691,7 @@ id tvNote
 id tvProgressPercent
 id tvSadhanaName
 id tvSessionCount
+id tvSubMantraBadge
 id tvSubMantraLabel
 id tvSubSessionCount
 id tvSubTodayTotal
@@ -4002,8 +4010,10 @@ string hint_start_date
 string hint_total_mala
 string icon_content_description
 string item_view_role_description
+string label_all_sadhanas
 string label_avg_mala_day
 string label_completion_estimate
+string label_current_streak
 string label_daily_progress_chart
 string label_days
 string label_days_maintained
@@ -4011,6 +4021,8 @@ string label_days_suffix
 string label_delete
 string label_edit
 string label_end_date_auto
+string label_entry_date
+string label_filter_by_sadhana
 string label_longest_streak
 string label_mala
 string label_mala_suffix
@@ -4020,6 +4032,8 @@ string label_no_data
 string label_no_entries
 string label_no_history
 string label_past_entries
+string label_selected_date
+string label_sub_mantra_badge
 string label_today
 string label_total_mala_completed
 string label_total_progress

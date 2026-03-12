@@ -12,8 +12,11 @@ class DailyEntryViewModel(
     val sadhanaId: Long
 ) : ViewModel() {
 
-    // Main mantra entries (sub_mantra_id IS NULL)
-    val entries: LiveData<List<JapEntry>> = repository.getEntriesForSadhana(sadhanaId)
+    private val _selectedDate = MutableLiveData<String>()
+    val selectedDate: LiveData<String> = _selectedDate
+
+    val entriesForSelectedDate: LiveData<List<JapEntry>> =
+        _selectedDate.switchMap { date -> repository.getEntriesForSadhanaOnDate(sadhanaId, date) }
 
     // Sub-mantras belonging to this sadhana
     val subMantras: LiveData<List<SubMantra>> = repository.getSubMantrasForSadhana(sadhanaId)
@@ -45,7 +48,7 @@ class DailyEntryViewModel(
 
     init {
         loadSadhana()
-        loadStats(todayDate())
+        setSelectedDate(todayDate())
     }
 
     fun todayDate(): String {
@@ -92,6 +95,10 @@ class DailyEntryViewModel(
         _subMantraSessionCounts.value = map
     }
 
+    fun resetSubMantraSessions() {
+        _subMantraSessionCounts.value = emptyMap()
+    }
+
     // ── Save ──────────────────────────────────────────────────────────────────
     fun saveEntry(date: String, mainMalaCount: Int, note: String, onComplete: () -> Unit) {
         viewModelScope.launch {
@@ -116,6 +123,12 @@ class DailyEntryViewModel(
             if (subs.isNotEmpty()) loadSubMantraTodayTotals(date, subs)
             onComplete()
         }
+    }
+
+
+    fun setSelectedDate(date: String) {
+        _selectedDate.value = date
+        loadStats(date)
     }
 }
 

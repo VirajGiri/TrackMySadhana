@@ -9,6 +9,7 @@ import com.virajgiri.trackmysadhana.data.entity.JapEntry
 import com.virajgiri.trackmysadhana.data.entity.MukhyaSadhana
 import com.virajgiri.trackmysadhana.data.repository.SadhanaRepository
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
@@ -17,6 +18,7 @@ data class ReportStats(
     val daysMaintained: Int,
     val missedDays: Int,
     val longestStreak: Int,
+    val currentStreak: Int,
     val avgMalaPerDay: Float,
     val completionEstimateDays: String
 )
@@ -38,28 +40,39 @@ class ReportsViewModel(private val repository: SadhanaRepository) : ViewModel() 
         val entries  = allEntries.value  ?: return
         val sadhanas = allSadhanas.value ?: return
 
-        val totalMala = entries.sumOf { it.malaCount }
-        val distinctDates = entries.map { it.date }.toSortedSet()
+        // ── Filter: only main mantra entries (sub_mantra_id IS NULL) ──────────
+        val mainEntries = entries.filter { it.subMantraId == null }
+
+        val totalMala      = mainEntries.sumOf { it.malaCount }
+        val distinctDates  = mainEntries.map { it.date }.toSortedSet()
         val daysMaintained = distinctDates.size
 
-        // Missed days: days between earliest sadhana start and today with no entry
-        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-        val today = sdf.format(Date())
+        // ── Missed days: from earliest sadhana start to YESTERDAY ─────────────
+        val sdf       = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val today     = sdf.format(Date())
+        val yesCal    = Calendar.getInstance().apply { add(Calendar.DAY_OF_YEAR, -1) }
+        val yesterday = sdf.format(yesCal.time)
         val earliestStart = sadhanas.minOfOrNull { it.startDate } ?: today
         val missedDays = try {
-            val start = sdf.parse(earliestStart)!!
-            val end   = sdf.parse(today)!!
-            val totalDays = ((end.time - start.time) / 86_400_000L).toInt() + 1
-            (totalDays - daysMaintained).coerceAtLeast(0)
+            if (earliestStart >= today) {
+                0
+            } else {
+                val start     = sdf.parse(earliestStart)!!
+                val end       = sdf.parse(yesterday)!!
+                val totalDays = ((end.time - start.time) / 86_400_000L).toInt() + 1
+                (totalDays - daysMaintained).coerceAtLeast(0)
+            }
         } catch (e: Exception) { 0 }
 
-        // Longest streak
-        val longestStreak = computeLongestStreak(distinctDates.toList())
+        // ── Streaks ───────────────────────────────────────────────────────────
+        val sortedDates   = distinctDates.toList()
+        val longestStreak = computeLongestStreak(sortedDates)
+        val currentStreak = computeCurrentStreak(sortedDates)
 
-        // Average mala per active day
+        // ── Average mala per active day ───────────────────────────────────────
         val avgMala = if (daysMaintained > 0) totalMala.toFloat() / daysMaintained else 0f
 
-        // Remaining mala across all sadhanas
+        // ── Completion estimate ───────────────────────────────────────────────
         val totalTarget = sadhanas.sumOf { it.totalMalaTarget }
         val remaining   = (totalTarget - totalMala).coerceAtLeast(0)
         val estimateText = if (avgMala > 0) {
@@ -67,7 +80,9 @@ class ReportsViewModel(private val repository: SadhanaRepository) : ViewModel() 
             "$days days"
         } else "N/A"
 
-        stats.postValue(ReportStats(totalMala, daysMaintained, missedDays, longestStreak, avgMala, estimateText))
+        stats.postValue(
+            ReportStats(totalMala, daysMaintained, missedDays, longestStreak, currentStreak, avgMala, estimateText)
+        )
     }
 
     private fun computeLongestStreak(sortedDates: List<String>): Int {
@@ -83,6 +98,27 @@ class ReportsViewModel(private val repository: SadhanaRepository) : ViewModel() 
         }
         return longest
     }
+
+    /** Current streak: consecutive days ending on today or yesterday. */
+    private fun computeCurrentStreak(sortedDates: List<String>): Int {
+        if (sortedDates.isEmpty()) return 0
+        val sdf       = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val today     = sdf.format(Date())
+        val yesCal    = Calendar.getInstance().apply { add(Calendar.DAY_OF_YEAR, -1) }
+        val yesterday = sdf.format(yesCal.time)
+
+        val lastDate = sortedDates.last()
+        if (lastDate != today && lastDate != yesterday) return 0
+
+        var streak = 1
+        for (i in sortedDates.size - 2 downTo 0) {
+            val curr     = sdf.parse(sortedDates[i + 1])!!
+            val prev     = sdf.parse(sortedDates[i])!!
+            val diffDays = ((curr.time - prev.time) / 86_400_000L).toInt()
+            if (diffDays == 1) streak++ else break
+        }
+        return streak
+    }
 }
 
 class ReportsViewModelFactory(private val repository: SadhanaRepository) : ViewModelProvider.Factory {
@@ -93,4 +129,3 @@ class ReportsViewModelFactory(private val repository: SadhanaRepository) : ViewM
         throw IllegalArgumentException("Unknown ViewModel")
     }
 }
-

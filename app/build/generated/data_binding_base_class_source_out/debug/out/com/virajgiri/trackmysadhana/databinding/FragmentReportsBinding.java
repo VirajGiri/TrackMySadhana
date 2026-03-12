@@ -27,6 +27,9 @@ public final class FragmentReportsBinding implements ViewBinding {
   public final TextView tvAvgMala;
 
   @NonNull
+  public final TextView tvCurrentStreak;
+
+  @NonNull
   public final TextView tvDaysMaintained;
 
   @NonNull
@@ -42,12 +45,14 @@ public final class FragmentReportsBinding implements ViewBinding {
   public final TextView tvTotalMala;
 
   private FragmentReportsBinding(@NonNull ScrollView rootView, @NonNull BarChart barChart,
-      @NonNull TextView tvAvgMala, @NonNull TextView tvDaysMaintained, @NonNull TextView tvEstimate,
+      @NonNull TextView tvAvgMala, @NonNull TextView tvCurrentStreak,
+      @NonNull TextView tvDaysMaintained, @NonNull TextView tvEstimate,
       @NonNull TextView tvLongestStreak, @NonNull TextView tvMissedDays,
       @NonNull TextView tvTotalMala) {
     this.rootView = rootView;
     this.barChart = barChart;
     this.tvAvgMala = tvAvgMala;
+    this.tvCurrentStreak = tvCurrentStreak;
     this.tvDaysMaintained = tvDaysMaintained;
     this.tvEstimate = tvEstimate;
     this.tvLongestStreak = tvLongestStreak;
@@ -94,6 +99,12 @@ public final class FragmentReportsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvCurrentStreak;
+      TextView tvCurrentStreak = ViewBindings.findChildViewById(rootView, id);
+      if (tvCurrentStreak == null) {
+        break missingId;
+      }
+
       id = R.id.tvDaysMaintained;
       TextView tvDaysMaintained = ViewBindings.findChildViewById(rootView, id);
       if (tvDaysMaintained == null) {
@@ -124,7 +135,7 @@ public final class FragmentReportsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentReportsBinding((ScrollView) rootView, barChart, tvAvgMala,
+      return new FragmentReportsBinding((ScrollView) rootView, barChart, tvAvgMala, tvCurrentStreak,
           tvDaysMaintained, tvEstimate, tvLongestStreak, tvMissedDays, tvTotalMala);
     }
     String missingId = rootView.getResources().getResourceName(id);

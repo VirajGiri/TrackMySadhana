@@ -38,6 +38,7 @@ class ReportsFragment : Fragment() {
             binding.tvDaysMaintained.text = stats.daysMaintained.toString()
             binding.tvMissedDays.text     = stats.missedDays.toString()
             binding.tvLongestStreak.text  = "${stats.longestStreak} days"
+            binding.tvCurrentStreak.text  = "${stats.currentStreak} days"
             binding.tvAvgMala.text        = String.format("%.1f", stats.avgMalaPerDay)
             binding.tvEstimate.text       = stats.completionEstimateDays
         }

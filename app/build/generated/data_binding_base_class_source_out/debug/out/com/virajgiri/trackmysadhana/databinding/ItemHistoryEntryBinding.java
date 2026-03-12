@@ -35,15 +35,20 @@ public final class ItemHistoryEntryBinding implements ViewBinding {
   @NonNull
   public final TextView tvSadhanaName;
 
+  @NonNull
+  public final TextView tvSubMantraBadge;
+
   private ItemHistoryEntryBinding(@NonNull MaterialCardView rootView,
       @NonNull MaterialButton btnDelete, @NonNull MaterialButton btnEdit,
-      @NonNull TextView tvMalaCount, @NonNull TextView tvNote, @NonNull TextView tvSadhanaName) {
+      @NonNull TextView tvMalaCount, @NonNull TextView tvNote, @NonNull TextView tvSadhanaName,
+      @NonNull TextView tvSubMantraBadge) {
     this.rootView = rootView;
     this.btnDelete = btnDelete;
     this.btnEdit = btnEdit;
     this.tvMalaCount = tvMalaCount;
     this.tvNote = tvNote;
     this.tvSadhanaName = tvSadhanaName;
+    this.tvSubMantraBadge = tvSubMantraBadge;
   }
 
   @Override
@@ -103,8 +108,14 @@ public final class ItemHistoryEntryBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvSubMantraBadge;
+      TextView tvSubMantraBadge = ViewBindings.findChildViewById(rootView, id);
+      if (tvSubMantraBadge == null) {
+        break missingId;
+      }
+
       return new ItemHistoryEntryBinding((MaterialCardView) rootView, btnDelete, btnEdit,
-          tvMalaCount, tvNote, tvSadhanaName);
+          tvMalaCount, tvNote, tvSadhanaName, tvSubMantraBadge);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

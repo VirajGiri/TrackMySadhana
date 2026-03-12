@@ -57,6 +57,17 @@
     <string name="label_days">Days Completed</string>
     <string name="label_past_entries">Past Entries</string>
     <string name="label_no_entries">No entries yet. Start your sadhana!</string>
+    <string name="label_entry_date">Entry Date</string>
     <string name="label_today">Today</string>
     <string name="label_mala">Mala</string>
+    <string name="label_selected_date">Selected Date</string>
+
+
+    <!-- History Filter -->
+    <string name="label_filter_by_sadhana">Filter by Sadhana</string>
+    <string name="label_all_sadhanas">All Sadhanas</string>
+    <string name="label_sub_mantra_badge">Sub-mantra</string>
+
+    <!-- Reports extras -->
+    <string name="label_current_streak">Current Streak</string>
 </resources>

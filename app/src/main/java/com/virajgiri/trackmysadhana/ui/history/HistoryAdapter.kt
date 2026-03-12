@@ -1,6 +1,7 @@
 package com.virajgiri.trackmysadhana.ui.history
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -8,9 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.virajgiri.trackmysadhana.data.entity.JapEntry
 import com.virajgiri.trackmysadhana.databinding.ItemHistoryDateBinding
 import com.virajgiri.trackmysadhana.databinding.ItemHistoryEntryBinding
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 sealed class HistoryListItem {
-    data class DateHeader(val date: String) : HistoryListItem()
+    data class DateHeader(val date: String, val totalMala: Int) : HistoryListItem()
     data class EntryItem(val entry: JapEntry, val sadhanaName: String) : HistoryListItem()
 }
 
@@ -22,6 +25,12 @@ class HistoryAdapter(
     companion object {
         private const val TYPE_HEADER = 0
         private const val TYPE_ENTRY  = 1
+        private val INPUT_SDF   = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        private val DISPLAY_SDF = SimpleDateFormat("EEE, d MMM yyyy", Locale.getDefault())
+
+        fun formatDate(raw: String): String = try {
+            DISPLAY_SDF.format(INPUT_SDF.parse(raw)!!)
+        } catch (e: Exception) { raw }
     }
 
     override fun getItemViewType(position: Int) = when (getItem(position)) {
@@ -33,7 +42,10 @@ class HistoryAdapter(
 
     inner class HeaderViewHolder(private val b: ItemHistoryDateBinding) :
         RecyclerView.ViewHolder(b.root) {
-        fun bind(item: HistoryListItem.DateHeader) { b.tvDate.text = item.date }
+        fun bind(item: HistoryListItem.DateHeader) {
+            b.tvDate.text      = formatDate(item.date)
+            b.tvDateTotal.text = "${item.totalMala} Mala"
+        }
     }
 
     // ── Entry Row ─────────────────────────────────────────────────────────────
@@ -43,11 +55,19 @@ class HistoryAdapter(
         fun bind(item: HistoryListItem.EntryItem) {
             b.tvSadhanaName.text = item.sadhanaName
             b.tvMalaCount.text   = "${item.entry.malaCount} Mala"
+
+            // Sub-mantra badge
+            if (item.entry.subMantraId != null) {
+                b.tvSubMantraBadge.visibility = View.VISIBLE
+            } else {
+                b.tvSubMantraBadge.visibility = View.GONE
+            }
+
             if (item.entry.experienceNote.isNotBlank()) {
-                b.tvNote.visibility = android.view.View.VISIBLE
+                b.tvNote.visibility = View.VISIBLE
                 b.tvNote.text = item.entry.experienceNote
             } else {
-                b.tvNote.visibility = android.view.View.GONE
+                b.tvNote.visibility = View.GONE
             }
             b.btnEdit.setOnClickListener   { onEdit(item.entry) }
             b.btnDelete.setOnClickListener { onDelete(item.entry) }
@@ -80,4 +100,3 @@ class HistoryAdapter(
         override fun areContentsTheSame(old: HistoryListItem, new: HistoryListItem) = old == new
     }
 }
-

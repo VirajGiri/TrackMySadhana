@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:rowCount="3"
+            android:rowCount="4"
             android:useDefaultMargins="true"
             android:layout_marginBottom="20dp">
 
@@ -96,6 +96,23 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Current Streak 🔥 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/label_current_streak" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tvCurrentStreak" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0 days" android:textColor="#FF9800" android:textSize="22sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
             <!-- Avg Mala/Day -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
@@ -113,20 +130,26 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Completion Estimate -->
+            <!-- Completion Estimate (spans 2 columns) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
+                android:layout_columnSpan="2"
                 android:layout_margin="4dp"
                 app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="12dp">
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="vertical" android:padding="14dp">
+                    android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="@string/label_completion_estimate" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+                        <TextView android:id="@+id/tvEstimate" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="N/A" android:textColor="@color/accent" android:textSize="22sp" android:textStyle="bold"/>
+                    </LinearLayout>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="@string/label_completion_estimate" android:textColor="@color/text_secondary" android:textSize="11sp"/>
-                    <TextView android:id="@+id/tvEstimate" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="N/A" android:textColor="@color/accent" android:textSize="22sp" android:textStyle="bold"/>
+                        android:text="⏳" android:textSize="28sp" android:layout_marginStart="12dp"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

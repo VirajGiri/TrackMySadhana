@@ -1,5 +1,6 @@
 package com.virajgiri.trackmysadhana.ui.dailyentry
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -11,6 +12,7 @@ import com.virajgiri.trackmysadhana.data.database.SadhanaDatabase
 import com.virajgiri.trackmysadhana.data.repository.SadhanaRepository
 import com.virajgiri.trackmysadhana.databinding.ActivityDailyEntryBinding
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
@@ -20,7 +22,8 @@ class DailyEntryActivity : AppCompatActivity() {
     private lateinit var viewModel: DailyEntryViewModel
     private lateinit var entryAdapter: JapEntryAdapter
     private lateinit var subMantraAdapter: SubMantraCounterAdapter
-    private val today = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
+    private val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+    private val today = dateFormat.format(Date())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +39,8 @@ class DailyEntryActivity : AppCompatActivity() {
         val repository = SadhanaRepository(SadhanaDatabase.getInstance(this).sadhanaDao())
         viewModel = ViewModelProvider(this, DailyEntryViewModelFactory(repository, sadhanaId))[DailyEntryViewModel::class.java]
 
-        binding.tvTodayDate.text = "Today: $today"
+        binding.cardEntryDate.setOnClickListener { showDatePicker() }
+        binding.ivChangeDate.setOnClickListener { showDatePicker() }
 
         // ── Sub-mantra counters ──────────────────────────────────────────────
         subMantraAdapter = SubMantraCounterAdapter(
@@ -53,7 +57,7 @@ class DailyEntryActivity : AppCompatActivity() {
             binding.rvSubMantras.visibility     = if (hasSubs) View.VISIBLE else View.GONE
             binding.dividerMain.visibility      = if (hasSubs) View.VISIBLE else View.GONE
             subMantraAdapter.submitList(subs)
-            if (hasSubs) viewModel.loadSubMantraTodayTotals(today, subs)
+            if (hasSubs) viewModel.loadSubMantraTodayTotals(viewModel.selectedDate.value ?: today, subs)
         }
 
         // Refresh counter cells whenever session counts or today totals change
@@ -102,9 +106,18 @@ class DailyEntryActivity : AppCompatActivity() {
         binding.btnIncrement.setOnClickListener { viewModel.increment() }
         binding.btnDecrement.setOnClickListener { viewModel.decrement() }
 
-        viewModel.entries.observe(this) { entries ->
+
+        viewModel.entriesForSelectedDate.observe(this) { entries ->
             entryAdapter.submitList(entries)
             binding.tvNoEntries.visibility = if (entries.isEmpty()) View.VISIBLE else View.GONE
+        }
+
+        viewModel.selectedDate.observe(this) { date ->
+            binding.tvEntryDateValue.text = date
+            binding.tvTodayDate.text = "${getString(R.string.label_selected_date)}: $date"
+            viewModel.subMantras.value?.let { subs ->
+                if (subs.isNotEmpty()) viewModel.loadSubMantraTodayTotals(date, subs)
+            }
         }
 
         binding.btnSaveEntry.setOnClickListener { saveEntry() }
@@ -127,6 +140,7 @@ class DailyEntryActivity : AppCompatActivity() {
         val mainCount = viewModel.sessionCount.value ?: 0
         val subCounts = viewModel.subMantraSessionCounts.value ?: emptyMap()
         val note      = binding.etExperienceNote.text?.toString()?.trim() ?: ""
+        val entryDate = viewModel.selectedDate.value ?: today
 
         val hasAnything = mainCount > 0 || subCounts.values.any { it > 0 }
         if (!hasAnything) {
@@ -134,14 +148,42 @@ class DailyEntryActivity : AppCompatActivity() {
             return
         }
         binding.btnSaveEntry.isEnabled = false
-        viewModel.saveEntry(today, mainCount, note) {
+        viewModel.saveEntry(entryDate, mainCount, note) {
             runOnUiThread {
                 Toast.makeText(this, R.string.entry_saved, Toast.LENGTH_SHORT).show()
                 viewModel.resetSession()
+                viewModel.resetSubMantraSessions()
                 binding.etExperienceNote.text?.clear()
                 binding.btnSaveEntry.isEnabled = true
             }
         }
+    }
+
+
+    private fun showDatePicker() {
+        val calendar = Calendar.getInstance().apply {
+            time = dateFormat.parse(viewModel.selectedDate.value ?: today) ?: Date()
+        }
+        val dialog = DatePickerDialog(
+            this,
+            { _, year, month, dayOfMonth ->
+                val picked = Calendar.getInstance().apply { set(year, month, dayOfMonth) }
+                applySelectedDate(dateFormat.format(picked.time))
+            },
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH)
+        )
+        dialog.datePicker.maxDate = Calendar.getInstance().timeInMillis
+        dialog.show()
+    }
+
+    private fun applySelectedDate(date: String) {
+        viewModel.setSelectedDate(date)
+        viewModel.resetSession()
+        viewModel.resetSubMantraSessions()
+        binding.etExperienceNote.text?.clear()
+        binding.btnSaveEntry.isEnabled = true
     }
 
     override fun onSupportNavigateUp(): Boolean { finish(); return true }

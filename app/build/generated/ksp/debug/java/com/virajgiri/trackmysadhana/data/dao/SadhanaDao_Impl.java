@@ -780,6 +780,62 @@ public final class SadhanaDao_Impl implements SadhanaDao {
   }
 
   @Override
+  public LiveData<List<JapEntry>> getEntriesForSadhanaOnDate(final long sadhanaId,
+      final String date) {
+    final String _sql = "SELECT * FROM jap_entry WHERE sadhana_id = ? AND sub_mantra_id IS NULL AND date = ? ORDER BY id DESC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
+    int _argIndex = 1;
+    _statement.bindLong(_argIndex, sadhanaId);
+    _argIndex = 2;
+    _statement.bindString(_argIndex, date);
+    return __db.getInvalidationTracker().createLiveData(new String[] {"jap_entry"}, false, new Callable<List<JapEntry>>() {
+      @Override
+      @Nullable
+      public List<JapEntry> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfSadhanaId = CursorUtil.getColumnIndexOrThrow(_cursor, "sadhana_id");
+          final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
+          final int _cursorIndexOfMalaCount = CursorUtil.getColumnIndexOrThrow(_cursor, "mala_count");
+          final int _cursorIndexOfExperienceNote = CursorUtil.getColumnIndexOrThrow(_cursor, "experience_note");
+          final int _cursorIndexOfSubMantraId = CursorUtil.getColumnIndexOrThrow(_cursor, "sub_mantra_id");
+          final List<JapEntry> _result = new ArrayList<JapEntry>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final JapEntry _item;
+            final long _tmpId;
+            _tmpId = _cursor.getLong(_cursorIndexOfId);
+            final long _tmpSadhanaId;
+            _tmpSadhanaId = _cursor.getLong(_cursorIndexOfSadhanaId);
+            final String _tmpDate;
+            _tmpDate = _cursor.getString(_cursorIndexOfDate);
+            final int _tmpMalaCount;
+            _tmpMalaCount = _cursor.getInt(_cursorIndexOfMalaCount);
+            final String _tmpExperienceNote;
+            _tmpExperienceNote = _cursor.getString(_cursorIndexOfExperienceNote);
+            final Long _tmpSubMantraId;
+            if (_cursor.isNull(_cursorIndexOfSubMantraId)) {
+              _tmpSubMantraId = null;
+            } else {
+              _tmpSubMantraId = _cursor.getLong(_cursorIndexOfSubMantraId);
+            }
+            _item = new JapEntry(_tmpId,_tmpSadhanaId,_tmpDate,_tmpMalaCount,_tmpExperienceNote,_tmpSubMantraId);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
   public LiveData<List<JapEntry>> getAllEntries() {
     final String _sql = "SELECT * FROM jap_entry ORDER BY date DESC, sadhana_id ASC";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);

@@ -4,6 +4,7 @@ package com.virajgiri.trackmysadhana.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import androidx.viewbinding.ViewBindings;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.virajgiri.trackmysadhana.R;
@@ -39,10 +41,16 @@ public final class ActivityDailyEntryBinding implements ViewBinding {
   public final MaterialButton btnSaveEntry;
 
   @NonNull
+  public final MaterialCardView cardEntryDate;
+
+  @NonNull
   public final View dividerMain;
 
   @NonNull
   public final TextInputEditText etExperienceNote;
+
+  @NonNull
+  public final ImageView ivChangeDate;
 
   @NonNull
   public final ProgressBar progressBarToday;
@@ -64,6 +72,9 @@ public final class ActivityDailyEntryBinding implements ViewBinding {
 
   @NonNull
   public final TextView tvDaysCompleted;
+
+  @NonNull
+  public final TextView tvEntryDateValue;
 
   @NonNull
   public final TextView tvMainMantraLabel;
@@ -101,23 +112,27 @@ public final class ActivityDailyEntryBinding implements ViewBinding {
   private ActivityDailyEntryBinding(@NonNull CoordinatorLayout rootView,
       @NonNull AppBarLayout appBarLayout, @NonNull MaterialButton btnDecrement,
       @NonNull MaterialButton btnIncrement, @NonNull MaterialButton btnSaveEntry,
-      @NonNull View dividerMain, @NonNull TextInputEditText etExperienceNote,
+      @NonNull MaterialCardView cardEntryDate, @NonNull View dividerMain,
+      @NonNull TextInputEditText etExperienceNote, @NonNull ImageView ivChangeDate,
       @NonNull ProgressBar progressBarToday, @NonNull ProgressBar progressBarTotal,
       @NonNull RecyclerView rvPastEntries, @NonNull RecyclerView rvSubMantras,
       @NonNull TextInputLayout tilExperienceNote, @NonNull MaterialToolbar toolbar,
-      @NonNull TextView tvDaysCompleted, @NonNull TextView tvMainMantraLabel,
-      @NonNull TextView tvMukhyaMantraText, @NonNull TextView tvNoEntries,
-      @NonNull TextView tvProgressPercent, @NonNull TextView tvSessionCount,
-      @NonNull TextView tvSubMantraLabel, @NonNull TextView tvTargetInfo,
-      @NonNull TextView tvTodayCompleted, @NonNull TextView tvTodayDate,
-      @NonNull TextView tvTodayPercent, @NonNull TextView tvTotalMala) {
+      @NonNull TextView tvDaysCompleted, @NonNull TextView tvEntryDateValue,
+      @NonNull TextView tvMainMantraLabel, @NonNull TextView tvMukhyaMantraText,
+      @NonNull TextView tvNoEntries, @NonNull TextView tvProgressPercent,
+      @NonNull TextView tvSessionCount, @NonNull TextView tvSubMantraLabel,
+      @NonNull TextView tvTargetInfo, @NonNull TextView tvTodayCompleted,
+      @NonNull TextView tvTodayDate, @NonNull TextView tvTodayPercent,
+      @NonNull TextView tvTotalMala) {
     this.rootView = rootView;
     this.appBarLayout = appBarLayout;
     this.btnDecrement = btnDecrement;
     this.btnIncrement = btnIncrement;
     this.btnSaveEntry = btnSaveEntry;
+    this.cardEntryDate = cardEntryDate;
     this.dividerMain = dividerMain;
     this.etExperienceNote = etExperienceNote;
+    this.ivChangeDate = ivChangeDate;
     this.progressBarToday = progressBarToday;
     this.progressBarTotal = progressBarTotal;
     this.rvPastEntries = rvPastEntries;
@@ -125,6 +140,7 @@ public final class ActivityDailyEntryBinding implements ViewBinding {
     this.tilExperienceNote = tilExperienceNote;
     this.toolbar = toolbar;
     this.tvDaysCompleted = tvDaysCompleted;
+    this.tvEntryDateValue = tvEntryDateValue;
     this.tvMainMantraLabel = tvMainMantraLabel;
     this.tvMukhyaMantraText = tvMukhyaMantraText;
     this.tvNoEntries = tvNoEntries;
@@ -189,6 +205,12 @@ public final class ActivityDailyEntryBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cardEntryDate;
+      MaterialCardView cardEntryDate = ViewBindings.findChildViewById(rootView, id);
+      if (cardEntryDate == null) {
+        break missingId;
+      }
+
       id = R.id.dividerMain;
       View dividerMain = ViewBindings.findChildViewById(rootView, id);
       if (dividerMain == null) {
@@ -198,6 +220,12 @@ public final class ActivityDailyEntryBinding implements ViewBinding {
       id = R.id.etExperienceNote;
       TextInputEditText etExperienceNote = ViewBindings.findChildViewById(rootView, id);
       if (etExperienceNote == null) {
+        break missingId;
+      }
+
+      id = R.id.ivChangeDate;
+      ImageView ivChangeDate = ViewBindings.findChildViewById(rootView, id);
+      if (ivChangeDate == null) {
         break missingId;
       }
 
@@ -240,6 +268,12 @@ public final class ActivityDailyEntryBinding implements ViewBinding {
       id = R.id.tvDaysCompleted;
       TextView tvDaysCompleted = ViewBindings.findChildViewById(rootView, id);
       if (tvDaysCompleted == null) {
+        break missingId;
+      }
+
+      id = R.id.tvEntryDateValue;
+      TextView tvEntryDateValue = ViewBindings.findChildViewById(rootView, id);
+      if (tvEntryDateValue == null) {
         break missingId;
       }
 
@@ -310,11 +344,11 @@ public final class ActivityDailyEntryBinding implements ViewBinding {
       }
 
       return new ActivityDailyEntryBinding((CoordinatorLayout) rootView, appBarLayout, btnDecrement,
-          btnIncrement, btnSaveEntry, dividerMain, etExperienceNote, progressBarToday,
-          progressBarTotal, rvPastEntries, rvSubMantras, tilExperienceNote, toolbar,
-          tvDaysCompleted, tvMainMantraLabel, tvMukhyaMantraText, tvNoEntries, tvProgressPercent,
-          tvSessionCount, tvSubMantraLabel, tvTargetInfo, tvTodayCompleted, tvTodayDate,
-          tvTodayPercent, tvTotalMala);
+          btnIncrement, btnSaveEntry, cardEntryDate, dividerMain, etExperienceNote, ivChangeDate,
+          progressBarToday, progressBarTotal, rvPastEntries, rvSubMantras, tilExperienceNote,
+          toolbar, tvDaysCompleted, tvEntryDateValue, tvMainMantraLabel, tvMukhyaMantraText,
+          tvNoEntries, tvProgressPercent, tvSessionCount, tvSubMantraLabel, tvTargetInfo,
+          tvTodayCompleted, tvTodayDate, tvTodayPercent, tvTotalMala);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

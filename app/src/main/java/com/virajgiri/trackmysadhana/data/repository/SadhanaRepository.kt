@@ -24,6 +24,8 @@ class SadhanaRepository(private val dao: SadhanaDao) {
 
     // JapEntry
     fun getEntriesForSadhana(sadhanaId: Long): LiveData<List<JapEntry>> = dao.getEntriesForSadhana(sadhanaId)
+    fun getEntriesForSadhanaOnDate(sadhanaId: Long, date: String): LiveData<List<JapEntry>> =
+        dao.getEntriesForSadhanaOnDate(sadhanaId, date)
     fun getAllEntries(): LiveData<List<JapEntry>> = dao.getAllEntries()
     fun getDailyTotals(): LiveData<List<DailyTotal>> = dao.getDailyTotals()
     suspend fun getTotalMala(sadhanaId: Long): Int = dao.getTotalMala(sadhanaId)

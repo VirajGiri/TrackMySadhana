@@ -4,7 +4,8 @@ package com.virajgiri.trackmysadhana.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,24 +19,33 @@ import java.lang.String;
 
 public final class FragmentHistoryBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final RecyclerView rvHistory;
 
   @NonNull
+  public final Spinner spinnerSadhanaFilter;
+
+  @NonNull
+  public final TextView tvHistorySummary;
+
+  @NonNull
   public final TextView tvNoHistory;
 
-  private FragmentHistoryBinding(@NonNull FrameLayout rootView, @NonNull RecyclerView rvHistory,
+  private FragmentHistoryBinding(@NonNull LinearLayout rootView, @NonNull RecyclerView rvHistory,
+      @NonNull Spinner spinnerSadhanaFilter, @NonNull TextView tvHistorySummary,
       @NonNull TextView tvNoHistory) {
     this.rootView = rootView;
     this.rvHistory = rvHistory;
+    this.spinnerSadhanaFilter = spinnerSadhanaFilter;
+    this.tvHistorySummary = tvHistorySummary;
     this.tvNoHistory = tvNoHistory;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -66,13 +76,26 @@ public final class FragmentHistoryBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.spinnerSadhanaFilter;
+      Spinner spinnerSadhanaFilter = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerSadhanaFilter == null) {
+        break missingId;
+      }
+
+      id = R.id.tvHistorySummary;
+      TextView tvHistorySummary = ViewBindings.findChildViewById(rootView, id);
+      if (tvHistorySummary == null) {
+        break missingId;
+      }
+
       id = R.id.tvNoHistory;
       TextView tvNoHistory = ViewBindings.findChildViewById(rootView, id);
       if (tvNoHistory == null) {
         break missingId;
       }
 
-      return new FragmentHistoryBinding((FrameLayout) rootView, rvHistory, tvNoHistory);
+      return new FragmentHistoryBinding((LinearLayout) rootView, rvHistory, spinnerSadhanaFilter,
+          tvHistorySummary, tvNoHistory);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
