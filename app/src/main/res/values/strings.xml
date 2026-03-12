@@ -1,4 +1,62 @@
 <resources>
-    <string name="app_name">TrackMySadhana</string>
-    <string name="hello_sadhana">Track My Sadhana</string>
+    <string name="app_name">Sadhana Tracker</string>
+    <string name="hello_sadhana">Welcome to TrackMySadhana!</string>
+    <string name="dashboard_title">Mukhya Sadhanas</string>
+    <string name="calendar">Calendar</string>
+
+    <!-- Add New Sadhana -->
+    <string name="add_sadhana_title">New Mukhya Sadhana</string>
+    <string name="hint_sadhana_name">Sadhana Name</string>
+    <string name="hint_daily_mala">Daily Mala Target</string>
+    <string name="hint_total_mala">Total Mala Target</string>
+    <string name="hint_start_date">Start Date (tap to pick)</string>
+    <string name="hint_end_date">End Date (tap to pick)</string>
+    <string name="save_sadhana">Save Sadhana</string>
+    <string name="error_fill_all_fields">Please fill all fields</string>
+    <string name="error_invalid_number">Enter a valid number greater than 0</string>
+    <string name="sadhana_saved">Sadhana saved!</string>
+    <string name="add_new_sadhana">Add New Sadhana</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_history">History</string>
+    <string name="nav_reports">Reports</string>
+
+    <!-- Reports -->
+    <string name="label_total_mala_completed">Total Mala Completed</string>
+    <string name="label_days_maintained">Days Maintained</string>
+    <string name="label_missed_days">Missed Days</string>
+    <string name="label_longest_streak">Longest Streak</string>
+    <string name="label_avg_mala_day">Avg Mala / Day</string>
+    <string name="label_completion_estimate">Completion Estimate</string>
+    <string name="label_daily_progress_chart">Daily Mala Progress</string>
+    <string name="label_days_suffix">days</string>
+    <string name="label_mala_suffix">Mala</string>
+    <string name="label_no_data">No data yet</string>
+
+    <!-- History -->
+    <string name="label_edit">Edit</string>
+    <string name="label_delete">Delete</string>
+    <string name="label_no_history">No history entries yet</string>
+    <string name="dialog_edit_entry">Edit Entry</string>
+    <string name="dialog_delete_confirm">Delete this entry?</string>
+
+    <!-- Mantras -->
+    <string name="label_mantras">Mantras (Naman / Awahan / Dhyan)</string>
+    <string name="add_mantra">+ Add Mantra</string>
+    <string name="hint_mantra_text">Mantra text</string>
+    <string name="label_end_date_auto">End Date (auto-calculated)</string>
+
+    <!-- Daily Entry -->
+    <string name="daily_entry_placeholder">Daily Entry — Coming Soon</string>
+    <string name="hint_mala_count">Mala Count</string>
+    <string name="hint_experience_note">Experience / Note (optional)</string>
+    <string name="save_entry">Save Entry</string>
+    <string name="entry_saved">Entry saved!</string>
+    <string name="label_total_progress">Total Progress</string>
+    <string name="label_days">Days Completed</string>
+    <string name="label_past_entries">Past Entries</string>
+    <string name="label_no_entries">No entries yet. Start your sadhana!</string>
+    <string name="label_today">Today</string>
+    <string name="label_mala">Mala</string>
 </resources>

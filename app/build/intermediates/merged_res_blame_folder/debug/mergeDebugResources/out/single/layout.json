@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\item_history_entry.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_history_entry.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\activity_daily_entry.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\activity_daily_entry.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\item_sub_mantra_counter.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_sub_mantra_counter.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeDebugResources-42:/layout/item_mantra_input.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-45:/layout/item_mantra_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\item_jap_entry.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_jap_entry.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeDebugResources-42:/layout/activity_add_sadhana.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-45:/layout/activity_add_sadhana.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeDebugResources-42:/layout/activity_daily_entry.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-45:/layout/activity_daily_entry.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\fragment_history.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\fragment_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\activity_add_sadhana.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\activity_add_sadhana.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\item_sadhana_card.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_sadhana_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\item_history_date.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_history_date.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\item_mantra_input.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_mantra_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-mergeDebugResources-42:\\layout\\fragment_reports.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\fragment_reports.xml"
+    }
+]

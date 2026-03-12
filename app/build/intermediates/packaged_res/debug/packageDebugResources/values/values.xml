@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#FFC107</color>
+    <color name="accent_ripple">#33FFC107</color>
+    <color name="black">#FF000000</color>
+    <color name="card_background">#2D1A0A</color>
+    <color name="dark_background">#1A0A00</color>
+    <color name="primary">#8D4B1A</color>
+    <color name="primary_dark">#6B3412</color>
+    <color name="progress_track">#4A2A10</color>
+    <color name="text_secondary">#E0C090</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="add_mantra">+ Add Mantra</string>
+    <string name="add_new_sadhana">Add New Sadhana</string>
+    <string name="add_sadhana_title">New Mukhya Sadhana</string>
+    <string name="app_name">Sadhana Tracker</string>
+    <string name="calendar">Calendar</string>
+    <string name="daily_entry_placeholder">Daily Entry — Coming Soon</string>
+    <string name="dashboard_title">Mukhya Sadhanas</string>
+    <string name="dialog_delete_confirm">Delete this entry?</string>
+    <string name="dialog_edit_entry">Edit Entry</string>
+    <string name="entry_saved">Entry saved!</string>
+    <string name="error_fill_all_fields">Please fill all fields</string>
+    <string name="error_invalid_number">Enter a valid number greater than 0</string>
+    <string name="hello_sadhana">Welcome to TrackMySadhana!</string>
+    <string name="hint_daily_mala">Daily Mala Target</string>
+    <string name="hint_end_date">End Date (tap to pick)</string>
+    <string name="hint_experience_note">Experience / Note (optional)</string>
+    <string name="hint_mala_count">Mala Count</string>
+    <string name="hint_mantra_text">Mantra text</string>
+    <string name="hint_sadhana_name">Sadhana Name</string>
+    <string name="hint_start_date">Start Date (tap to pick)</string>
+    <string name="hint_total_mala">Total Mala Target</string>
+    <string name="label_avg_mala_day">Avg Mala / Day</string>
+    <string name="label_completion_estimate">Completion Estimate</string>
+    <string name="label_daily_progress_chart">Daily Mala Progress</string>
+    <string name="label_days">Days Completed</string>
+    <string name="label_days_maintained">Days Maintained</string>
+    <string name="label_days_suffix">days</string>
+    <string name="label_delete">Delete</string>
+    <string name="label_edit">Edit</string>
+    <string name="label_end_date_auto">End Date (auto-calculated)</string>
+    <string name="label_longest_streak">Longest Streak</string>
+    <string name="label_mala">Mala</string>
+    <string name="label_mala_suffix">Mala</string>
+    <string name="label_mantras">Mantras (Naman / Awahan / Dhyan)</string>
+    <string name="label_missed_days">Missed Days</string>
+    <string name="label_no_data">No data yet</string>
+    <string name="label_no_entries">No entries yet. Start your sadhana!</string>
+    <string name="label_no_history">No history entries yet</string>
+    <string name="label_past_entries">Past Entries</string>
+    <string name="label_today">Today</string>
+    <string name="label_total_mala_completed">Total Mala Completed</string>
+    <string name="label_total_progress">Total Progress</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_history">History</string>
+    <string name="nav_reports">Reports</string>
+    <string name="sadhana_saved">Sadhana saved!</string>
+    <string name="save_entry">Save Entry</string>
+    <string name="save_sadhana">Save Sadhana</string>
+    <style name="Base.Theme.TrackMySadhana" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSurface">@color/card_background</item>
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSurface">@color/accent</item>
+        <item name="android:windowBackground">@color/dark_background</item>
+    </style>
+    <style name="Theme.TrackMySadhana" parent="Base.Theme.TrackMySadhana"/>
+</resources>
