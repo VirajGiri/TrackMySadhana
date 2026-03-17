@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.virajgiri.trackmysadhana"
+    package="com.virajgiri.trackmysadhana.debug"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0.0-debug" >
 
     <uses-sdk
         android:minSdkVersion="24"
         android:targetSdkVersion="35" />
 
     <permission
-        android:name="com.virajgiri.trackmysadhana.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.virajgiri.trackmysadhana.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.virajgiri.trackmysadhana.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.virajgiri.trackmysadhana.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:debuggable="true"
+        android:description="@string/app_description"
         android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:localeConfig="@xml/locales_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrackMySadhana" >
+
+        <!-- Main launcher — uses Splash Screen theme -->
         <activity
             android:name="com.virajgiri.trackmysadhana.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.TrackMySadhana" >
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TrackMySadhana.Splash"
+            android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,16 +46,18 @@
             android:name="com.virajgiri.trackmysadhana.ui.dailyentry.DailyEntryActivity"
             android:exported="false"
             android:parentActivityName="com.virajgiri.trackmysadhana.MainActivity"
-            android:theme="@style/Theme.TrackMySadhana" />
+            android:theme="@style/Theme.TrackMySadhana"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.virajgiri.trackmysadhana.ui.addsadhana.AddSadhanaActivity"
             android:exported="false"
             android:parentActivityName="com.virajgiri.trackmysadhana.MainActivity"
-            android:theme="@style/Theme.TrackMySadhana" />
+            android:theme="@style/Theme.TrackMySadhana"
+            android:windowSoftInputMode="adjustResize" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.virajgiri.trackmysadhana.androidx-startup"
+            android:authorities="com.virajgiri.trackmysadhana.debug.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

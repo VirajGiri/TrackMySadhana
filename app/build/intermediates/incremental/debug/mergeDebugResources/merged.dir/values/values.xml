@@ -496,6 +496,7 @@
     </attr>
     <attr format="reference" name="polarRelativeTo"/>
     <attr format="reference" name="popupMenuBackground"/>
+    <attr format="reference" name="postSplashScreenTheme"/>
     <attr format="string|reference|enum" name="quantizeMotionInterpolator">
         <enum name="easeInOut" value="0"/>
         <enum name="easeIn" value="1"/>
@@ -528,6 +529,7 @@
     <attr format="boolean" name="singleSelection"/>
     <attr format="float" name="sizePercent"/>
     <attr format="reference" name="sliderStyle"/>
+    <attr format="dimension" name="splashScreenIconSize"/>
     <attr format="boolean" name="state_with_icon"/>
     <attr format="color" name="strokeColor"/>
     <attr format="dimension" name="strokeWidth"/>
@@ -625,6 +627,10 @@
         <enum name="position" value="0"/>
         <enum name="path" value="1"/>
     </attr>
+    <attr format="reference" name="windowSplashScreenAnimatedIcon"/>
+    <attr format="integer" name="windowSplashScreenAnimationDuration"/>
+    <attr format="color" name="windowSplashScreenBackground"/>
+    <attr format="color" name="windowSplashScreenIconBackgroundColor"/>
     <bool name="abc_action_bar_embed_tabs">true</bool>
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="mtrl_btn_textappearance_all_caps">true</bool>
@@ -1764,6 +1770,13 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <dimen name="splashscreen_icon_mask_size_no_background">410dp</dimen>
+    <dimen name="splashscreen_icon_mask_size_with_background">342dp</dimen>
+    <dimen name="splashscreen_icon_mask_stroke_no_background">109dp</dimen>
+    <dimen name="splashscreen_icon_mask_stroke_with_background">92dp</dimen>
+    <dimen name="splashscreen_icon_size">?splashScreenIconSize</dimen>
+    <dimen name="splashscreen_icon_size_no_background">288dp</dimen>
+    <dimen name="splashscreen_icon_size_with_background">240dp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
     <dimen name="tooltip_margin">8dp</dimen>
@@ -1895,6 +1908,7 @@
     <integer name="bottom_sheet_slide_duration">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="config_tooltipAnimTime">150</integer>
+    <integer name="default_icon_animation_duration">10000</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="design_tab_indicator_anim_duration_ms">300</integer>
     <integer name="hide_password_duration">320</integer>
@@ -1992,7 +2006,8 @@
     <string name="add_new_sadhana">Add New Sadhana</string>
     <string name="add_sadhana_title">New Mukhya Sadhana</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
-    <string name="app_name">Sadhana Tracker</string>
+    <string name="app_description">Track your daily spiritual sadhana, mala counts, and progress with ease.</string>
+    <string name="app_name">TrackMySadhana</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string description="A description of an accessibility action to collapse the bottom sheet [CHAR LIMIT=NONE]" name="bottomsheet_action_collapse">Collapse the bottom sheet</string>
@@ -2617,6 +2632,9 @@
     <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
     <style name="Base.Theme.MaterialComponents.Light.DialogWhenLarge" parent="Theme.MaterialComponents.Light"/>
+    <style name="Base.Theme.SplashScreen" parent="Base.v21.Theme.SplashScreen"/>
+    <style name="Base.Theme.SplashScreen.DayNight" parent="Base.Theme.SplashScreen.Light"/>
+    <style name="Base.Theme.SplashScreen.Light" parent="Base.v21.Theme.SplashScreen.Light"/>
     <style name="Base.Theme.TrackMySadhana" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
@@ -5603,6 +5621,10 @@
     <item name="shapeAppearanceOverlay">@null</item>
   </style>
     <style name="Base.Widget.MaterialComponents.TextView" parent="Widget.AppCompat.TextView"/>
+    <style name="Base.v21.Theme.SplashScreen" parent="android:Theme.DeviceDefault.NoActionBar">
+    </style>
+    <style name="Base.v21.Theme.SplashScreen.Light" parent="android:Theme.DeviceDefault.Light.NoActionBar">
+    </style>
     <style name="CardView" parent="Base.CardView">
     </style>
     <style name="CardView.Dark">
@@ -6611,7 +6633,39 @@
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
   </style>
+    <style name="Theme.SplashScreen" parent="Theme.SplashScreen.Common">
+        <item name="postSplashScreenTheme">?android:attr/theme</item>
+        <item name="windowSplashScreenAnimationDuration">
+            @integer/default_icon_animation_duration
+        </item>
+        <item name="windowSplashScreenBackground">?android:colorBackground</item>
+        <item name="windowSplashScreenAnimatedIcon">@android:drawable/sym_def_app_icon</item>
+
+    </style>
+    <style name="Theme.SplashScreen.Common" parent="Base.Theme.SplashScreen.DayNight">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">
+            @drawable/compat_splash_screen_no_icon_background
+        </item>
+        <item name="android:opacity">opaque</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="splashScreenIconSize">@dimen/splashscreen_icon_size_no_background</item>
+    </style>
+    <style name="Theme.SplashScreen.IconBackground" parent="Theme.SplashScreen">
+        <item name="android:windowBackground">@drawable/compat_splash_screen</item>
+        <item name="splashScreenIconSize">@dimen/splashscreen_icon_size_with_background</item>
+    </style>
     <style name="Theme.TrackMySadhana" parent="Base.Theme.TrackMySadhana"/>
+    <style name="Theme.TrackMySadhana.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/dark_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/primary</item>
+        <item name="postSplashScreenTheme">@style/Theme.TrackMySadhana</item>
+    </style>
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat"/>
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>

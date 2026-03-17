@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Sadhana Tracker</string>
+    <string name="app_name">TrackMySadhana</string>
+    <string name="app_description">Track your daily spiritual sadhana, mala counts, and progress with ease.</string>
     <string name="hello_sadhana">Welcome to TrackMySadhana!</string>
     <string name="dashboard_title">Mukhya Sadhanas</string>
     <string name="calendar">Calendar</string>

@@ -1,114 +1,130 @@
 [
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_item_sub_mantra_counter.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_sub_mantra_counter.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_item_history_entry.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_history_entry.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\color_bottom_nav_selector.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\color\\bottom_nav_selector.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_activity_daily_entry.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/activity_daily_entry.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\menu_bottom_nav_menu.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\menu\\bottom_nav_menu.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_fragment_dashboard.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/fragment_dashboard.xml"
     },
     {
-        "merged": "com.virajgiri.trackmysadhana.app-debug-43:/layout_activity_daily_entry.xml.flat",
-        "source": "com.virajgiri.trackmysadhana.app-main-45:/layout/activity_daily_entry.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/mipmap-anydpi/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/menu_menu_sadhana_card.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/menu/menu_sadhana_card.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_item_jap_entry.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_jap_entry.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_activity_main.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\drawable_ic_meditation.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\drawable\\ic_meditation.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_item_history_date.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_history_date.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\menu_menu_sadhana_card.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\menu\\menu_sadhana_card.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/drawable_ic_calendar.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/drawable/ic_calendar.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_fragment_history.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\fragment_history.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/xml_data_extraction_rules.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\drawable_ic_calendar.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\drawable\\ic_calendar.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/color_bottom_nav_selector.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/color/bottom_nav_selector.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_activity_add_sadhana.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\activity_add_sadhana.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_item_sadhana_card.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_sadhana_card.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\activity_main.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/drawable_ic_more_vert.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/drawable/ic_more_vert.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_item_mantra_input.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_mantra_input.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/drawable_ic_reports.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/drawable/ic_reports.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_item_jap_entry.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_jap_entry.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_fragment_reports.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\fragment_reports.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_item_mantra_input.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_mantra_input.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\drawable_background_saffron.png.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\drawable\\background_saffron.png"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_activity_daily_entry.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\activity_daily_entry.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_item_sub_mantra_counter.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_sub_mantra_counter.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\drawable_ic_history.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\drawable\\ic_history.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/menu_dashboard_menu.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/menu/dashboard_menu.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_item_history_entry.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_history_entry.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_fragment_dashboard.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\fragment_dashboard.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_fragment_reports.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/fragment_reports.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\menu_dashboard_menu.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\menu\\dashboard_menu.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/drawable_ic_meditation.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/drawable/ic_meditation.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\drawable_ic_progress.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\drawable\\ic_progress.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/drawable_ic_history.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/drawable/ic_history.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\drawable_ic_more_vert.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\drawable\\ic_more_vert.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/drawable_ic_progress.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/drawable/ic_progress.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\drawable_ic_reports.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\drawable\\ic_reports.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_fragment_history.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/fragment_history.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_item_history_date.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_history_date.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/xml_backup_rules.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-debug-43:\\layout_item_sadhana_card.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.virajgiri.trackmysadhana.app-main-45:\\layout\\item_sadhana_card.xml"
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/xml_locales_config.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/xml/locales_config.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/drawable_background_saffron.png.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/drawable/background_saffron.png"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/layout_activity_add_sadhana.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/activity_add_sadhana.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-debug-44:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/mipmap-anydpi/ic_launcher_round.xml"
     }
 ]

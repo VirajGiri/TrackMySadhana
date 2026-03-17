@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.virajgiri.trackmysadhana.app-mergeDebugResources-41:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.virajgiri.trackmysadhana.app-mergeDebugResources-42:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\b8ae27f8f67c9d9cc3f14e6f944a3592\\transformed\\core-1.13.1\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\2da1987e6416f345fc2684690d0696cd\\transformed\\core-1.13.1\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\fff9b8846950f8bc27d2bf95519472c4\\transformed\\appcompat-1.7.0\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\649fafb4c3297cbe606f2b5054733318\\transformed\\appcompat-1.7.0\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

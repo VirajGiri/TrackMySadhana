@@ -13,7 +13,8 @@
     <string name="add_mantra">+ Add Mantra</string>
     <string name="add_new_sadhana">Add New Sadhana</string>
     <string name="add_sadhana_title">New Mukhya Sadhana</string>
-    <string name="app_name">Sadhana Tracker</string>
+    <string name="app_description">Track your daily spiritual sadhana, mala counts, and progress with ease.</string>
+    <string name="app_name">TrackMySadhana</string>
     <string name="calendar">Calendar</string>
     <string name="daily_entry_placeholder">Daily Entry — Coming Soon</string>
     <string name="dashboard_title">Mukhya Sadhanas</string>
@@ -75,4 +76,10 @@
         <item name="android:windowBackground">@color/dark_background</item>
     </style>
     <style name="Theme.TrackMySadhana" parent="Base.Theme.TrackMySadhana"/>
+    <style name="Theme.TrackMySadhana.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/dark_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/primary</item>
+        <item name="postSplashScreenTheme">@style/Theme.TrackMySadhana</item>
+    </style>
 </resources>

@@ -1,7 +1,15 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+}
+
+// ── Load keystore properties ──────────────────────────────────────────────
+val keystorePropsFile = rootProject.file("keystore.properties")
+val keystoreProps = Properties().also { props ->
+    if (keystorePropsFile.exists()) props.load(keystorePropsFile.inputStream())
 }
 
 android {
@@ -13,20 +21,52 @@ android {
         minSdk = 24
         targetSdk = 35
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // ── Signing ───────────────────────────────────────────────────────────
+    signingConfigs {
+        create("release") {
+            val ksFile = keystoreProps["storeFile"]?.toString()
+            if (keystorePropsFile.exists() && ksFile != null &&
+                !keystoreProps["storePassword"].toString().contains("CHANGE_ME")) {
+                storeFile      = file(ksFile)
+                storePassword  = keystoreProps["storePassword"].toString()
+                keyAlias       = keystoreProps["keyAlias"].toString()
+                keyPassword    = keystoreProps["keyPassword"].toString()
+            }
+        }
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            // ── R8 / ProGuard ─────────────────────────────────────────────
+            isMinifyEnabled    = true
+            isShrinkResources  = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            val releaseSigning = signingConfigs.getByName("release")
+            if (releaseSigning.storeFile != null) {
+                signingConfig = releaseSigning
+            }
+        }
+        debug {
+            applicationIdSuffix = ".debug"
+            versionNameSuffix   = "-debug"
         }
     }
+
+    // ── App Bundle splits (for Play Store) ───────────────────────────────
+    bundle {
+        language { enableSplit = true }
+        density  { enableSplit = true }
+        abi      { enableSplit = true }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -36,6 +76,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig  = true
     }
 }
 
@@ -46,6 +87,8 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.recyclerview)
+    // Splash Screen
+    implementation(libs.androidx.splashscreen)
     // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)

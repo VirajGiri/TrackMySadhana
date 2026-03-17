@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/activity_main.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/activity_add_sadhana.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/activity_add_sadhana.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/fragment_reports.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/fragment_reports.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/fragment_history.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/item_history_date.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_history_date.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/item_sadhana_card.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_sadhana_card.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/item_sub_mantra_counter.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_sub_mantra_counter.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/item_history_entry.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_history_entry.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/item_jap_entry.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_jap_entry.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/fragment_dashboard.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/activity_daily_entry.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/activity_daily_entry.xml"
+    },
+    {
+        "merged": "com.virajgiri.trackmysadhana.app-mergeReleaseResources-43:/layout/item_mantra_input.xml",
+        "source": "com.virajgiri.trackmysadhana.app-main-46:/layout/item_mantra_input.xml"
+    }
+]

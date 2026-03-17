@@ -1,6 +1,11 @@
 # Compiled class file
 *.class
 
+# Keystore / signing (NEVER commit these)
+keystore.properties
+*.jks
+*.keystore
+
 # Log file
 *.log
 

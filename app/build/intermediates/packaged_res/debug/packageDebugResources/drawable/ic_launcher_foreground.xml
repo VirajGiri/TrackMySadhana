@@ -1,13 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    App Icon Foreground — Spiritual Mala Bead Circle
+    Design: 12 mala beads in a gold ring on a dark background,
+            with a white Sumeru (main bead) at top and golden center bead.
+    Colors: Gold (#FFC107) on Dark (#1A0A00)
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+
+    <!-- Outer mala ring (donut shape using evenOdd fill) -->
     <path
-        android:fillColor="#6200EE"
-        android:pathData="M0,0h108v108h-108z" />
+        android:fillColor="#FFC107"
+        android:fillType="evenOdd"
+        android:pathData="
+            M54,22 A32,32,0,1,1,53.99,22 Z
+            M54,30 A24,24,0,1,1,53.99,30 Z" />
+
+    <!-- 11 small beads around the ring (30° apart, skipping top for Sumeru) -->
+    <!-- Bead at 30° → (76, 43) approx -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M72.5,35 A3.5,3.5,0,1,1,72.49,35 Z" />
+    <!-- Bead at 60° → (80, 54) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M76.5,54 A3.5,3.5,0,1,1,76.49,54 Z" />
+    <!-- Bead at 90° → (76, 65) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M72.5,73 A3.5,3.5,0,1,1,72.49,73 Z" />
+    <!-- Bead at 120° → (65, 73) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M62.5,80 A3.5,3.5,0,1,1,62.49,80 Z" />
+    <!-- Bead at 150° → (54, 76) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M54,82 A3.5,3.5,0,1,1,53.99,82 Z" />
+    <!-- Bead at 180° → (43, 73) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M45.5,80 A3.5,3.5,0,1,1,45.49,80 Z" />
+    <!-- Bead at 210° → (35, 65) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M35.5,73 A3.5,3.5,0,1,1,35.49,73 Z" />
+    <!-- Bead at 240° → (28, 54) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M31.5,54 A3.5,3.5,0,1,1,31.49,54 Z" />
+    <!-- Bead at 270° → (35, 43) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M35.5,35 A3.5,3.5,0,1,1,35.49,35 Z" />
+    <!-- Bead at 300° → (43, 35) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M45.5,28 A3.5,3.5,0,1,1,45.49,28 Z" />
+    <!-- Bead at 330° → (65, 35) -->
+    <path android:fillColor="#FFC107"
+        android:pathData="M62.5,28 A3.5,3.5,0,1,1,62.49,28 Z" />
+
+    <!-- Sumeru (main/top bead) — slightly larger, white/cream -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M54,27C42.95,27 34,35.95 34,47C34,56.65 40.65,64.7 49.73,66.56L48,81L54,78L60,81L58.27,66.56C67.35,64.7 74,56.65 74,47C74,35.95 65.05,27 54,27ZM54,63C44.61,63 37,55.39 37,46C37,36.61 44.61,29 54,29C63.39,29 71,36.61 71,46C71,55.39 63.39,63 54,63Z" />
+        android:fillColor="#FFFDE7"
+        android:pathData="M54,18 A5,5,0,1,1,53.99,18 Z" />
+
+    <!-- Center golden dot (represents the divine core / Meru) -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M54,46 A8,8,0,1,1,53.99,46 Z" />
+
+    <!-- Tiny dark center to give depth -->
+    <path
+        android:fillColor="#8D4B1A"
+        android:pathData="M54,50 A4,4,0,1,1,53.99,50 Z" />
+
 </vector>

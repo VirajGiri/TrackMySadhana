@@ -1,0 +1,48 @@
+com.virajgiri.trackmysadhana.app-viewpager2-1.1.0-beta02-0 C:\Users\User\.gradle\caches\8.9\transforms\013b148290408c81f8537cc2827b64d2\transformed\viewpager2-1.1.0-beta02\res
+com.virajgiri.trackmysadhana.app-appcompat-resources-1.7.0-1 C:\Users\User\.gradle\caches\8.9\transforms\022d5e6e10f25df45db59aba03015aae\transformed\appcompat-resources-1.7.0\res
+com.virajgiri.trackmysadhana.app-core-splashscreen-1.0.1-2 C:\Users\User\.gradle\caches\8.9\transforms\076a68ec51bd60ea22204a59e9b9680f\transformed\core-splashscreen-1.0.1\res
+com.virajgiri.trackmysadhana.app-sqlite-2.4.0-3 C:\Users\User\.gradle\caches\8.9\transforms\07ecbfbb253a587d388948b203e47b50\transformed\sqlite-2.4.0\res
+com.virajgiri.trackmysadhana.app-activity-1.9.3-4 C:\Users\User\.gradle\caches\8.9\transforms\15cc9187ad930591e3a910da9a0d4b37\transformed\activity-1.9.3\res
+com.virajgiri.trackmysadhana.app-savedstate-1.2.1-5 C:\Users\User\.gradle\caches\8.9\transforms\16dcd3dcd09fe1911fe45e852a5f563b\transformed\savedstate-1.2.1\res
+com.virajgiri.trackmysadhana.app-lifecycle-livedata-ktx-2.8.3-6 C:\Users\User\.gradle\caches\8.9\transforms\187e007815a06e66580e8566a3c0fbeb\transformed\lifecycle-livedata-ktx-2.8.3\res
+com.virajgiri.trackmysadhana.app-sqlite-framework-2.4.0-7 C:\Users\User\.gradle\caches\8.9\transforms\1b9a4d2dd50871dbd186501b373384f4\transformed\sqlite-framework-2.4.0\res
+com.virajgiri.trackmysadhana.app-material-1.12.0-8 C:\Users\User\.gradle\caches\8.9\transforms\25fe00e9d13ff5e5a60ce342744e4888\transformed\material-1.12.0\res
+com.virajgiri.trackmysadhana.app-cardview-1.0.0-9 C:\Users\User\.gradle\caches\8.9\transforms\2a4f429600c0f15b602f81fc39ffdbf5\transformed\cardview-1.0.0\res
+com.virajgiri.trackmysadhana.app-core-1.13.1-10 C:\Users\User\.gradle\caches\8.9\transforms\2da1987e6416f345fc2684690d0696cd\transformed\core-1.13.1\res
+com.virajgiri.trackmysadhana.app-coordinatorlayout-1.1.0-11 C:\Users\User\.gradle\caches\8.9\transforms\2ffad3134d407cca7fab2a68d16d944b\transformed\coordinatorlayout-1.1.0\res
+com.virajgiri.trackmysadhana.app-lifecycle-runtime-ktx-release-12 C:\Users\User\.gradle\caches\8.9\transforms\316388dfbcf52ecddd9c96eebc54f064\transformed\lifecycle-runtime-ktx-release\res
+com.virajgiri.trackmysadhana.app-lifecycle-viewmodel-ktx-2.8.3-13 C:\Users\User\.gradle\caches\8.9\transforms\385b5c28e99b7e5f67ec9e0ff1023b95\transformed\lifecycle-viewmodel-ktx-2.8.3\res
+com.virajgiri.trackmysadhana.app-lifecycle-process-2.8.3-14 C:\Users\User\.gradle\caches\8.9\transforms\3db0a011481ec2c6f728d857f7c6734c\transformed\lifecycle-process-2.8.3\res
+com.virajgiri.trackmysadhana.app-profileinstaller-1.4.0-15 C:\Users\User\.gradle\caches\8.9\transforms\4f61e53eacb060c74527c9dd604ee56d\transformed\profileinstaller-1.4.0\res
+com.virajgiri.trackmysadhana.app-emoji2-views-helper-1.3.0-16 C:\Users\User\.gradle\caches\8.9\transforms\563171309b3fdca276719dd60e12c8a4\transformed\emoji2-views-helper-1.3.0\res
+com.virajgiri.trackmysadhana.app-appcompat-1.7.0-17 C:\Users\User\.gradle\caches\8.9\transforms\649fafb4c3297cbe606f2b5054733318\transformed\appcompat-1.7.0\res
+com.virajgiri.trackmysadhana.app-lifecycle-livedata-core-2.8.3-18 C:\Users\User\.gradle\caches\8.9\transforms\69410b7b833230bb41ea4937b558bb36\transformed\lifecycle-livedata-core-2.8.3\res
+com.virajgiri.trackmysadhana.app-lifecycle-livedata-core-ktx-2.8.3-19 C:\Users\User\.gradle\caches\8.9\transforms\895da064b0d8158e55f51d436dc6629d\transformed\lifecycle-livedata-core-ktx-2.8.3\res
+com.virajgiri.trackmysadhana.app-recyclerview-1.3.2-20 C:\Users\User\.gradle\caches\8.9\transforms\8e4ca6bd71ea249364f8f0c09dce1c49\transformed\recyclerview-1.3.2\res
+com.virajgiri.trackmysadhana.app-core-runtime-2.2.0-21 C:\Users\User\.gradle\caches\8.9\transforms\963e75c10e02e11e90a93c6cc4706185\transformed\core-runtime-2.2.0\res
+com.virajgiri.trackmysadhana.app-core-ktx-1.13.1-22 C:\Users\User\.gradle\caches\8.9\transforms\a17cc725ea9c98ae7852f6fe7b0d5663\transformed\core-ktx-1.13.1\res
+com.virajgiri.trackmysadhana.app-drawerlayout-1.1.1-23 C:\Users\User\.gradle\caches\8.9\transforms\a20558ed3e3f18dbcffe92de7cdaf425\transformed\drawerlayout-1.1.1\res
+com.virajgiri.trackmysadhana.app-transition-1.5.0-24 C:\Users\User\.gradle\caches\8.9\transforms\a2cfdb605a5a59952f2373d49752d570\transformed\transition-1.5.0\res
+com.virajgiri.trackmysadhana.app-annotation-experimental-1.4.0-25 C:\Users\User\.gradle\caches\8.9\transforms\a378b13448416ff1a488d76ef98442b2\transformed\annotation-experimental-1.4.0\res
+com.virajgiri.trackmysadhana.app-savedstate-ktx-1.2.1-26 C:\Users\User\.gradle\caches\8.9\transforms\ab14594f926cfd61967b2761f34b2a5a\transformed\savedstate-ktx-1.2.1\res
+com.virajgiri.trackmysadhana.app-emoji2-1.3.0-27 C:\Users\User\.gradle\caches\8.9\transforms\b48428745804488f9ce6b154a1f996b4\transformed\emoji2-1.3.0\res
+com.virajgiri.trackmysadhana.app-room-ktx-2.6.1-28 C:\Users\User\.gradle\caches\8.9\transforms\b85191cd9a157dd12571cb0f3e4ece24\transformed\room-ktx-2.6.1\res
+com.virajgiri.trackmysadhana.app-fragment-ktx-1.8.5-29 C:\Users\User\.gradle\caches\8.9\transforms\c0c8afd958a1073c2bab2f2de78bdfd4\transformed\fragment-ktx-1.8.5\res
+com.virajgiri.trackmysadhana.app-constraintlayout-2.2.0-30 C:\Users\User\.gradle\caches\8.9\transforms\c2ef615b867bb8b0a626d8194aba5214\transformed\constraintlayout-2.2.0\res
+com.virajgiri.trackmysadhana.app-startup-runtime-1.1.1-31 C:\Users\User\.gradle\caches\8.9\transforms\c3f39d0996bca264b41ac44cfdbf1456\transformed\startup-runtime-1.1.1\res
+com.virajgiri.trackmysadhana.app-fragment-1.8.5-32 C:\Users\User\.gradle\caches\8.9\transforms\c6c1a65b87ed392a368351c6a2ab2b10\transformed\fragment-1.8.5\res
+com.virajgiri.trackmysadhana.app-customview-poolingcontainer-1.0.0-33 C:\Users\User\.gradle\caches\8.9\transforms\c772ce9e0e0c89c4c71636f0191eaddc\transformed\customview-poolingcontainer-1.0.0\res
+com.virajgiri.trackmysadhana.app-lifecycle-livedata-2.8.3-34 C:\Users\User\.gradle\caches\8.9\transforms\ca1bde87bb0f225f97feca5cbbd39aff\transformed\lifecycle-livedata-2.8.3\res
+com.virajgiri.trackmysadhana.app-activity-ktx-1.9.3-35 C:\Users\User\.gradle\caches\8.9\transforms\d7e4410cfd359e97c40f85fa3ce83acd\transformed\activity-ktx-1.9.3\res
+com.virajgiri.trackmysadhana.app-room-runtime-2.6.1-36 C:\Users\User\.gradle\caches\8.9\transforms\e343366bbd1bf5fc3ab35b128eadfaba\transformed\room-runtime-2.6.1\res
+com.virajgiri.trackmysadhana.app-lifecycle-viewmodel-release-37 C:\Users\User\.gradle\caches\8.9\transforms\e85666740feb0ec890836004f5fc3596\transformed\lifecycle-viewmodel-release\res
+com.virajgiri.trackmysadhana.app-lifecycle-viewmodel-savedstate-2.8.3-38 C:\Users\User\.gradle\caches\8.9\transforms\edd3634b2fac528cd1443b8f371cdcb0\transformed\lifecycle-viewmodel-savedstate-2.8.3\res
+com.virajgiri.trackmysadhana.app-lifecycle-runtime-release-39 C:\Users\User\.gradle\caches\8.9\transforms\fb9521630575bfbccaa0f7cf328bddb0\transformed\lifecycle-runtime-release\res
+com.virajgiri.trackmysadhana.app-pngs-40 D:\S T A R K\Viraj\GITHUB\TrackMySadhana\app\build\generated\res\pngs\release
+com.virajgiri.trackmysadhana.app-resValues-41 D:\S T A R K\Viraj\GITHUB\TrackMySadhana\app\build\generated\res\resValues\release
+com.virajgiri.trackmysadhana.app-packageReleaseResources-42 D:\S T A R K\Viraj\GITHUB\TrackMySadhana\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.virajgiri.trackmysadhana.app-packageReleaseResources-43 D:\S T A R K\Viraj\GITHUB\TrackMySadhana\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.virajgiri.trackmysadhana.app-merged-not-compiled-resources-44 D:\S T A R K\Viraj\GITHUB\TrackMySadhana\app\build\intermediates\merged-not-compiled-resources\release
+com.virajgiri.trackmysadhana.app-release-45 D:\S T A R K\Viraj\GITHUB\TrackMySadhana\app\build\intermediates\merged_res\release\mergeReleaseResources
+com.virajgiri.trackmysadhana.app-main-46 D:\S T A R K\Viraj\GITHUB\TrackMySadhana\app\src\main\res
+com.virajgiri.trackmysadhana.app-release-47 D:\S T A R K\Viraj\GITHUB\TrackMySadhana\app\src\release\res

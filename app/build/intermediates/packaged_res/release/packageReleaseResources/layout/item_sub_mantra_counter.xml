@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="#2D1A0A"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:strokeColor="@color/primary"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Type badge + mantra name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvMantraType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp"
+                android:textColor="@color/accent"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:id="@+id/tvMantraText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+        </LinearLayout>
+
+        <!-- Counter row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Decrement -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubDecrement"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:text="−"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:padding="0dp"
+                app:backgroundTint="@color/primary"
+                app:cornerRadius="22dp" />
+
+            <!-- Session count -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvSubSessionCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/accent"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This Session"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Increment -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubIncrement"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:text="+"
+                android:textSize="20sp"
+                android:textColor="@color/dark_background"
+                android:padding="0dp"
+                app:backgroundTint="@color/accent"
+                app:cornerRadius="22dp" />
+
+            <!-- Today total (from DB) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:background="@color/card_background"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:id="@+id/tvSubTodayTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today Total"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

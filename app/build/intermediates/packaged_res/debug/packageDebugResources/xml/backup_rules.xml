@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Backup rules for Android 11 and below (android:fullBackupContent).
+    We back up the Room database so users don't lose their sadhana history.
+-->
+<full-backup-content>
+    <include domain="database" path="sadhana_tracker.db" />
+    <include domain="database" path="sadhana_tracker.db-shm" />
+    <include domain="database" path="sadhana_tracker.db-wal" />
+    <include domain="sharedpref" path="." />
+    <exclude domain="cache"     path="." />
+    <exclude domain="no-backup" path="." />
+</full-backup-content>
+

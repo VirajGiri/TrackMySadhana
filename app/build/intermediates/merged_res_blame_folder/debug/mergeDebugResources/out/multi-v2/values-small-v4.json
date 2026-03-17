@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.virajgiri.trackmysadhana.app-mergeDebugResources-41:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.virajgiri.trackmysadhana.app-mergeDebugResources-42:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\263f9da98d6bb0cf77577207ed57d83c\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\25fe00e9d13ff5e5a60ce342744e4888\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- Calendar body: x=8 y=12 w=48 h=44 rx=6 -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M14,12 h36 q6,0 6,6 v32 q0,6 -6,6 h-36 q-6,0 -6,-6 v-32 q0,-6 6,-6 Z" />
+
+    <!-- Header band: x=8 y=22 w=48 h=6 -->
+    <path
+        android:fillColor="#8D4B1A"
+        android:pathData="M8,22 h48 v6 h-48 Z" />
+</vector>
+
